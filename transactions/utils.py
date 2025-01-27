@@ -1,5 +1,6 @@
 # transactions/utils.py
 from django.utils import timezone
+from transactions import models
 from transactions.models import Budget, Transaction
 
 def check_budget_alerts():
