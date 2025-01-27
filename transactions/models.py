@@ -17,6 +17,11 @@ class Budget(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
 
+    alert_threshold = models.DecimalField(
+        max_digits=5, decimal_places=2, default=90.00,
+        help_text="Percentage threshold for alerts"
+    )
+
     def __str__(self):
         return f"{self.user}'s {self.category} Budget"
 
